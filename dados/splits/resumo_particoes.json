@@ -1,0 +1,74 @@
+{
+  "semente": 42,
+  "proporcoes": {
+    "treino": 0.7,
+    "validacao": 0.15,
+    "teste": 0.15
+  },
+  "total": 7000,
+  "por_particao": {
+    "treino": 4900,
+    "validacao": 1050,
+    "teste": 1050
+  },
+  "por_classe": {
+    "airport": {
+      "treino": 490,
+      "validacao": 105,
+      "teste": 105
+    },
+    "beach": {
+      "treino": 490,
+      "validacao": 105,
+      "teste": 105
+    },
+    "circular_farmland": {
+      "treino": 490,
+      "validacao": 105,
+      "teste": 105
+    },
+    "dense_residential": {
+      "treino": 490,
+      "validacao": 105,
+      "teste": 105
+    },
+    "desert": {
+      "treino": 490,
+      "validacao": 105,
+      "teste": 105
+    },
+    "forest": {
+      "treino": 490,
+      "validacao": 105,
+      "teste": 105
+    },
+    "harbor": {
+      "treino": 490,
+      "validacao": 105,
+      "teste": 105
+    },
+    "mountain": {
+      "treino": 490,
+      "validacao": 105,
+      "teste": 105
+    },
+    "river": {
+      "treino": 490,
+      "validacao": 105,
+      "teste": 105
+    },
+    "storage_tank": {
+      "treino": 490,
+      "validacao": 105,
+      "teste": 105
+    }
+  },
+  "sobreposicao_entre_particoes": {
+    "treino&validacao": 0,
+    "treino&teste": 0,
+    "validacao&teste": 0
+  },
+  "grupos_de_duplicatas": 7,
+  "grupos_divididos_entre_particoes": 0,
+  "arquivos_inexistentes": 0
+}

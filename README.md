@@ -20,9 +20,18 @@ AV3_CienciaDados/
 │   ├── candidatas_quase_duplicatas.csv   # pares visualmente semelhantes (dHash) e avaliação
 │   ├── inventario_arquivos.csv           # um registro por imagem (hash, formato, dimensões, canais…)
 │   ├── estrutura_original.csv            # conferência das 45 pastas originais
-│   └── resumo_preparacao.json            # totais, versões de software e data da execução
+│   ├── resumo_preparacao.json            # totais, versões de software e data da execução
+│   └── splits/                           # partições treino/validação/teste (listas de caminhos)
+│       ├── particoes.csv  treino.csv  validacao.csv  teste.csv
+│       └── resumo_particoes.json
+├── notebooks/
+│   └── 01_analise_exploratoria.ipynb     # Etapa 2: EDA (executado, com saídas e interpretações)
+├── resultados/
+│   ├── figuras/eda/                      # figuras da EDA (PNG, 150 dpi)
+│   └── tabelas/eda/                      # tabelas da EDA (CSV)
 ├── scripts/
-│   └── preparar_dados.py          # procedimento completo e reproduzível
+│   ├── preparar_dados.py          # Etapa 1: preparação inicial, completa e reproduzível
+│   └── definir_particoes.py       # partições estratificadas e agrupadas por duplicata
 └── README.md
 ```
 
@@ -139,3 +148,53 @@ Como pede a documentação, nenhuma duplicata foi removida automaticamente: `dad
 - [x] A verificação de duplicatas foi realizada (exatas e quase-duplicatas).
 - [x] O relatório de preparação foi gerado.
 - [x] O procedimento está documentado e pode ser reproduzido (`scripts/preparar_dados.py`).
+
+---
+
+# Partições treino / validação / teste
+
+O documento da EDA exige que a análise visual use apenas a partição de treino. Por isso, as partições foram definidas antes da EDA, com `scripts/definir_particoes.py`:
+
+```bash
+python -I scripts/definir_particoes.py --projeto .   # padrão: --treino 0.70 --validacao 0.15 --teste 0.15 --semente 42
+```
+
+- **Estratificada:** 490 / 105 / 105 imagens por classe (4.900 / 1.050 / 1.050 no total).
+- **Agrupada por duplicata:** os 6 pares exatos de `airport` e a quase-duplicata de `mountain` ficam sempre inteiros na mesma partição, o que evita vazamento de dados entre as partições.
+- **Sem cópia de arquivos:** as partições são listas de caminhos que apontam para `dados/raw/`. A verificação confirmou 0 sobreposições, 0 grupos divididos e 0 arquivos inexistentes.
+
+As proporções e a semente podem ser alteradas por parâmetro. Se forem alteradas, a EDA deve ser executada novamente.
+
+# Etapa 2: Análise Exploratória de Dados
+
+Requisitos adicionais: `numpy`, `pandas`, `matplotlib`, `jupyter` (ou `nbclient` + `ipykernel`).
+O notebook `notebooks/01_analise_exploratoria.ipynb` contém o código, as figuras e as interpretações. Para reproduzir, basta executá-lo do início ao fim (cerca de 2 minutos). Ele regenera tudo em `resultados/`.
+
+**Regra de acesso aos dados:** o inventário, as contagens, os formatos e as duplicatas consideram as 7.000 imagens. Já os painéis, histogramas, descritores e a comparação de resolução usam **somente o treino**. Das partições de validação e teste, verificam-se apenas a contagem, a integridade e a sobreposição.
+
+| Seção | Figura principal | Resultado em uma linha |
+|---|---|---|
+| Distribuição das classes | `distribuicao_classes.png` | 700 imagens por classe (10% cada), equilíbrio perfeito; a preparação não alterou nada |
+| Características técnicas | `tamanho_arquivos.png` | 100% JPEG, 256×256, RGB com 3 canais; `dense_residential` tem os arquivos mais complexos e `desert` os mais simples |
+| Exemplos das classes | `exemplos_classes.png` | 5 imagens de treino por classe (semente 42) e descrição dos padrões de cada classe |
+| Ambiguidades | `ambiguidades_visuais.png`, `distancia_classes.png` | 4 pares sugeridos, com semelhanças restritas a subconjuntos de imagens; pelos descritores de cor e textura, o par mais próximo é airport × storage_tank |
+| Resoluções | `comparacao_resolucoes.png`, `perda_detalhe_resolucao.png` | em 128×128 a composição se mantém, mas barcos, aeronaves, telhados e copas se perdem |
+| Complementares | `intensidade_pixels.png`, `histogramas_rgb.png`, `variacao_intraclasse.png`, `casos_extremos.png` | desert é claro e quente, forest é escuro e homogêneo; há grande variação de iluminação dentro das classes |
+
+Observação de qualidade: algumas imagens trazem marcas de atribuição do provedor de imagens (por exemplo, o texto "GEBCO" no canto de `desert_204`). Essas marcas foram mantidas, porque fazem parte do dataset original.
+
+## Critérios de conclusão da EDA
+
+- [x] A distribuição das dez classes foi analisada.
+- [x] O gráfico de frequência das classes foi gerado.
+- [x] As propriedades técnicas dos arquivos foram consolidadas.
+- [x] O inventário e as inconsistências da preparação inicial foram considerados.
+- [x] Os exemplos visuais das dez classes foram apresentados.
+- [x] As características principais de cada categoria foram descritas.
+- [x] As possíveis ambiguidades visuais foram investigadas.
+- [x] Os painéis comparativos entre categorias foram produzidos.
+- [x] A mesma imagem foi apresentada em 128 × 128 e 256 × 256 pixels.
+- [x] As diferenças visuais entre resoluções foram discutidas.
+- [x] As visualizações de conteúdo usaram exclusivamente imagens de treino.
+- [x] As figuras e os resultados foram salvos.
+- [x] O notebook de análise está organizado e é reproduzível.

@@ -1,0 +1,12 @@
+classe,nome,quantidade,validas,percentual,esperado,diferenca
+airport,Aeroporto,700,700,10.0,700,0
+beach,Praia,700,700,10.0,700,0
+circular_farmland,Área agrícola circular,700,700,10.0,700,0
+dense_residential,Área residencial densa,700,700,10.0,700,0
+desert,Deserto,700,700,10.0,700,0
+forest,Floresta,700,700,10.0,700,0
+harbor,Porto,700,700,10.0,700,0
+mountain,Montanha,700,700,10.0,700,0
+river,Rio,700,700,10.0,700,0
+storage_tank,Tanques de armazenamento,700,700,10.0,700,0
+TOTAL,,7000,7000,100.0,7000,0

@@ -1,0 +1,13 @@
+par,classe,brilho,contraste,saturacao,gradiente,media_R,media_G,media_B
+beach × desert,beach,117.78,41.68,0.23,8.66,112.94,121.3,112.37
+beach × desert,desert,163.37,17.4,0.3,6.4,186.55,158.34,128.45
+beach × desert,distância (posição),1.066 (24º de 45),,,,,,
+river × harbor,river,92.01,28.98,0.25,8.16,85.45,97.13,82.85
+river × harbor,harbor,78.01,47.32,0.2,15.16,74.74,80.1,75.87
+river × harbor,distância (posição),0.881 (20º de 45),,,,,,
+forest × mountain,forest,53.47,21.84,0.3,11.76,48.42,57.96,43.56
+forest × mountain,mountain,96.96,27.95,0.24,10.53,98.29,99.08,82.58
+forest × mountain,distância (posição),1.243 (30º de 45),,,,,,
+circular_farmland × storage_tank,circular_farmland,102.93,31.79,0.23,6.54,100.17,107.02,89.13
+circular_farmland × storage_tank,storage_tank,111.07,45.82,0.15,13.22,113.21,111.65,102.45
+circular_farmland × storage_tank,distância (posição),0.826 (17º de 45),,,,,,

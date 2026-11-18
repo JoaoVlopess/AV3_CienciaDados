@@ -1,0 +1,11 @@
+classe,desvio_brilho,desvio_saturacao,desvio_gradiente
+airport,25.227,0.06,2.99
+beach,28.364,0.088,3.683
+circular_farmland,18.363,0.062,2.057
+dense_residential,19.72,0.041,4.434
+desert,28.493,0.096,3.149
+forest,8.587,0.059,3.476
+harbor,18.057,0.053,4.564
+mountain,25.669,0.08,4.039
+river,25.42,0.073,2.635
+storage_tank,20.303,0.053,3.98
