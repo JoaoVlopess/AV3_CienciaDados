@@ -1,0 +1,4 @@
+arquivo_a,classe_a,arquivo_b,classe_b,distancia_dhash,escopo,diferenca_media_pixel,avaliacao
+dados/raw/mountain/mountain_111.jpg,mountain,dados/raw/mountain/mountain_324.jpg,mountain,0,mesma_classe,0.034,"quase_duplicata_confirmada (mesma cena, recodificada)"
+dados/raw/beach/beach_106.jpg,beach,dados/raw/desert/desert_318.jpg,desert,2,entre_classes,44.258,falso_positivo (cenas distintas)
+dados/raw/beach/beach_106.jpg,beach,dados/raw/beach/beach_592.jpg,beach,3,mesma_classe,34.8,falso_positivo (cenas distintas)

@@ -1,0 +1,12 @@
+classe,quantidade_esperada,quantidade_encontrada,diferenca,arquivos_validos,arquivos_invalidos,duplicatas_exatas,status
+airport,700,700,0,700,0,12,OK_COM_DUPLICATAS
+beach,700,700,0,700,0,0,OK
+circular_farmland,700,700,0,700,0,0,OK
+dense_residential,700,700,0,700,0,0,OK
+desert,700,700,0,700,0,0,OK
+forest,700,700,0,700,0,0,OK
+harbor,700,700,0,700,0,0,OK
+mountain,700,700,0,700,0,0,OK
+river,700,700,0,700,0,0,OK
+storage_tank,700,700,0,700,0,0,OK
+TOTAL,7000,7000,0,7000,0,12,VER_OCORRENCIAS

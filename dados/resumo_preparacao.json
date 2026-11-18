@@ -1,0 +1,46 @@
+{
+  "executado_em": "2026-11-18T09:39:14",
+  "python": "3.13.7",
+  "pillow": "12.1.0",
+  "sistema": "Windows-11-10.0.26200-SP0",
+  "origem": "C:\\Users\\caioj\\OneDrive\\Área de Trabalho\\facul\\AV3_CienciaDados\\NWPU-RESISC45\\NWPU-RESISC45",
+  "destino": "C:\\Users\\caioj\\OneDrive\\Área de Trabalho\\facul\\AV3_CienciaDados\\dados\\raw",
+  "classes_originais": 45,
+  "imagens_originais": 31500,
+  "classes_selecionadas": [
+    "airport",
+    "beach",
+    "circular_farmland",
+    "dense_residential",
+    "desert",
+    "forest",
+    "harbor",
+    "mountain",
+    "river",
+    "storage_tank"
+  ],
+  "arquivos_copiados_nesta_execucao": 0,
+  "arquivos_ja_existentes": 7000,
+  "validacao_selecao": {
+    "pastas_em_raw": 10,
+    "exatamente_10_pastas": true,
+    "nomes_corretos": true,
+    "pastas_adicionais": [],
+    "classes_ausentes": []
+  },
+  "totais": {
+    "quantidade_esperada": 7000,
+    "quantidade_encontrada": 7000,
+    "diferenca": 0,
+    "arquivos_validos": 7000,
+    "arquivos_invalidos": 0,
+    "duplicatas_exatas": 12
+  },
+  "grupos_duplicatas_exatas": 6,
+  "pares_quase_duplicatas": 3,
+  "quase_duplicatas_confirmadas": 1,
+  "limiar_dhash": 4,
+  "limiar_diferenca_pixel": 2.0,
+  "ocorrencias_registradas": 9,
+  "exclusoes_realizadas": 0
+}

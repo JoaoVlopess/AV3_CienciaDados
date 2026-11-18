@@ -1,0 +1,10 @@
+tipo,classe,caminho,descricao,acao
+duplicata_exata,airport,dados/raw/airport/airport_118.jpg | dados/raw/airport/airport_315.jpg,grupo 1: 2 arquivos idênticos (mesma_classe),registrado; não excluído (decisão posterior)
+duplicata_exata,airport,dados/raw/airport/airport_050.jpg | dados/raw/airport/airport_420.jpg,grupo 2: 2 arquivos idênticos (mesma_classe),registrado; não excluído (decisão posterior)
+duplicata_exata,airport,dados/raw/airport/airport_243.jpg | dados/raw/airport/airport_397.jpg,grupo 3: 2 arquivos idênticos (mesma_classe),registrado; não excluído (decisão posterior)
+duplicata_exata,airport,dados/raw/airport/airport_361.jpg | dados/raw/airport/airport_509.jpg,grupo 4: 2 arquivos idênticos (mesma_classe),registrado; não excluído (decisão posterior)
+duplicata_exata,airport,dados/raw/airport/airport_064.jpg | dados/raw/airport/airport_527.jpg,grupo 5: 2 arquivos idênticos (mesma_classe),registrado; não excluído (decisão posterior)
+duplicata_exata,airport,dados/raw/airport/airport_289.jpg | dados/raw/airport/airport_635.jpg,grupo 6: 2 arquivos idênticos (mesma_classe),registrado; não excluído (decisão posterior)
+candidata_quase_duplicata,"mountain,mountain",dados/raw/mountain/mountain_111.jpg | dados/raw/mountain/mountain_324.jpg,"dHash a 0 bits (mesma_classe); diferença média por pixel 0.034 -> quase_duplicata_confirmada (mesma cena, recodificada)",registrado; não excluído
+candidata_quase_duplicata,"beach,desert",dados/raw/beach/beach_106.jpg | dados/raw/desert/desert_318.jpg,dHash a 2 bits (entre_classes); diferença média por pixel 44.258 -> falso_positivo (cenas distintas),registrado; não excluído
+candidata_quase_duplicata,"beach,beach",dados/raw/beach/beach_106.jpg | dados/raw/beach/beach_592.jpg,dHash a 3 bits (mesma_classe); diferença média por pixel 34.8 -> falso_positivo (cenas distintas),registrado; não excluído
